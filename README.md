@@ -5,3 +5,8 @@ Home Page
 
 <img width="960" alt="inventorymanagement" src="https://user-images.githubusercontent.com/88208046/189523059-5d12a799-ed2f-4b1a-bdba-563cd4e30c1e.PNG">
 
+When their is sucessful insertion in text database file
+
+<img width="960" alt="Capturein2" src="https://user-images.githubusercontent.com/88208046/189523157-d2f76f14-08e0-4229-ad35-543d3c094417.PNG">
+
+
