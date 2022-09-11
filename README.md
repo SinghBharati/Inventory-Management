@@ -9,4 +9,6 @@ When their is sucessful insertion in text database file
 
 <img width="960" alt="Capturein2" src="https://user-images.githubusercontent.com/88208046/189523157-d2f76f14-08e0-4229-ad35-543d3c094417.PNG">
 
+Showing the items in inventory
 
+<img width="960" alt="Capturein3" src="https://user-images.githubusercontent.com/88208046/189523263-d85d710f-21a0-4065-ab01-d99e7de7d94a.PNG">
