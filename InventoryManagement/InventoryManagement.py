@@ -4,7 +4,7 @@ import tkinter as tk
 
 #ef7d4c
 window=Tk()
-window.geometry("1320x350")
+window.geometry("1300x350")
 window.title("Inventory Management")
 
 productid=StringVar()
@@ -15,10 +15,10 @@ Quantity=StringVar()
 #FUNCTION TO INSERT THE DETAILS
 def insert():
     #GETTING THE INPUTS
-    productid=str(Product_id_entery.get()).ljust(10)
-    productname=str(Product_name_entery.get()).ljust(10)
-    Sellingprice=str(Selling_price_entery.get()).ljust(10)
-    Quantity=str(Quantity_entery.get()).ljust(10)
+    productid=str(Product_id_entery.get()).ljust(5)
+    productname=str(Product_name_entery.get()).ljust(5)
+    Sellingprice=str(Selling_price_entery.get()).ljust(5)
+    Quantity=str(Quantity_entery.get()).ljust(5)
     Append_product_id = open("InventoryManagement.txt", "a")
     Read_product_id = open("InventoryManagement.txt", "r")
     Check_list = Read_product_id.read()
@@ -37,7 +37,7 @@ def insert():
         with open("InventoryManagement.txt","r") as f:
             for line in f:
                 no_of_lines+=1
-        Append_product_id.write(f"{no_of_lines+1}\t\t\t{productid}\t\t\t{productname}\t\t\t{Sellingprice}\t\t\t{Quantity}\n")
+        Append_product_id.write(f"{no_of_lines+1}\t\t\t{productid}\t\t\t{productname}\t\t\t{Sellingprice}\t\t{Quantity}\n")
         messagebox.showinfo("Info","Details Inserted")
     Product_id_entery.delete(first=0, last=100)
     Product_name_entery.delete(first=0, last=100)
@@ -77,8 +77,8 @@ Input_frame.pack(fill="both",expand="yes")
 Title1.place(x=10, y=13)
 """
 #LABEL OF PRODUCT LIST
-Title2=Label(window, text="Product List",width=136,height=1, fg="black", relief="solid", font=("arial", 10, "bold"))
-Title2.place(x=200, y=12)
+Product_List_label=Label(window, text="Product List",width=136,height=1, fg="black", relief="solid", font=("arial", 10, "bold"))
+Product_List_label.place(x=180, y=12)
 
 #LABEL OF PRODUCT ID
 Product_id_label=Label(window, text="Product ID: ", bd=0 ,fg="black", relief="solid", font=("arial", 10, "bold"))
@@ -99,28 +99,28 @@ Product_name_label.place(x=10, y=215)
 #LABEL OF PRODUCT LIST
 #LABEL OF PRODUCT LIST ITEM NO
 Item_no_label=Label(window, text="Item no.", width=25,fg="black", relief="solid", font=("arial", 10, "bold"))
-Item_no_label.place(x=200, y=35)
+Item_no_label.place(x=180, y=35)
 
 #LABEL OF PRODUCT LIST PRODUCT ID
 Product_list_id_label=Label(window, text="Product ID", width=26,fg="black", relief="solid", font=("arial", 10, "bold"))
-Product_list_id_label.place(x=410, y=35)
+Product_list_id_label.place(x=400, y=35)
 
 #LABEL OF PRODUCT LIST NAME
 Product_list_name_label=Label(window, text="Name",width=25, fg="black", relief="solid", font=("arial", 10, "bold"),)
-Product_list_name_label.place(x=630, y=35)
+Product_list_name_label.place(x=620, y=35)
 
 #LABEL OF PRODUCT LIST SELLING PRICE
-Product_list_name_label=Label(window, text="Selling price",width=25, fg="black", relief="solid", font=("arial", 10, "bold"))
-Product_list_name_label.place(x=845, y=35)
+Product_list_name_label=Label(window, text="Selling price",width=27, fg="black", relief="solid", font=("arial", 10, "bold"))
+Product_list_name_label.place(x=840, y=35)
 
 #LABEL OF PRODUCT LIST QUANTITY
-Product_list_name_label=Label(window, text="Quantity",width=29, fg="black", relief="solid", font=("arial", 10, "bold"))
-Product_list_name_label.place(x=1060, y=35)
+Product_list_name_label=Label(window, text="Quantity",width=25, fg="black", relief="solid", font=("arial", 10, "bold"))
+Product_list_name_label.place(x=1070, y=35)
 
 #SHOW INFORMATION
 #VIEW AREA OF DETAILS
-Show_details=tk.Text(window, fg="black", bg="light blue", relief="solid", width=122, height=15, font=("bold"))
-Show_details.place(x=200, y=60)
+Show_details=tk.Text(window, fg="black", bg="light blue", relief="solid", width=100, height=15, font=("bold"))
+Show_details.place(x=180, y=60)
 
 #ENTRY FIELD
 #ENTRY FIELD OF PRODUCT ID
